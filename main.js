@@ -1,5 +1,5 @@
 const ITEMS_CONTAINER = document.getElementID("items");
-const ITEMS_TEMPLATE = document.getElementID("itemsTemplate");
+const ITEM_TEMPLATE = document.getElementID("itemTemplate");
 const ADD_BUTTON = document.getElementID("add");
 
 let items = getItems();
