@@ -1,6 +1,6 @@
-const ITEMS_CONTAINER = document.getElementID("items");
-const ITEM_TEMPLATE = document.getElementID("itemTemplate");
-const ADD_BUTTON = document.getElementID("add");
+const ITEMS_CONTAINER = document.getElementByID("items");
+const ITEM_TEMPLATE = document.getElementByID("itemTemplate");
+const ADD_BUTTON = document.getElementByID("add");
 
 let items = getItems();
 
@@ -63,7 +63,7 @@ function refreshList() {
     completedInput.addEventListener("change", () => {
         updateItem(item, "completed", completedInput.checked);
         });
-    }
+    });
 }
 
 
@@ -73,5 +73,3 @@ ADD_BUTTON.adEventListener("click", () => {
 })
 
 refreshList();
-
-// video https://www.youtube.com/watch?v=cijPd-TXPn4&t=102s
