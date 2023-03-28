@@ -4,7 +4,7 @@
     margin-bottom: 10px;
 }
 
-.item-compteted:checked + .item-description {
+.item-completed:checked + .item-description {
     background: #dddddd;
     text-decoration: line-through;
 }
