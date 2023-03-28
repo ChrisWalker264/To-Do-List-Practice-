@@ -1,6 +1,6 @@
-const ITEMS_CONTAINER = document.getElementByID("items");
-const ITEM_TEMPLATE = document.getElementByID("itemTemplate");
-const ADD_BUTTON = document.getElementByID("add");
+const ITEMS_CONTAINER = document.getElementById("items");
+const ITEM_TEMPLATE = document.getElementById("itemTemplate");
+const ADD_BUTTON = document.getElementById("add");
 
 let items = getItems();
 
