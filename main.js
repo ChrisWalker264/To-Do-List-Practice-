@@ -13,7 +13,7 @@ function getItems() {
 function setItems(items) {
     const itemsJson = JSON.stringify(items);
 
-    localStorage.setItem("todo-test", itemsJSON);
+    localStorage.setItem("todo-test", itemsJson);
 }
 
 function addItem() {
@@ -48,7 +48,7 @@ function refreshList() {
     
     ITEMS_CONTAINER.innerHTML = "";
     for (const item of items) {
-        const itemElement = ITEMS_TEMPLATE.content.cloneNODE(true);
+        const itemElement = ITEMS_TEMPLATE.content.cloneNode(true);
         const descriptionInput = itemElement.querySelector(".item-description");
         const completedInput = itemElement.querySelector(".item-completed");
 
@@ -56,20 +56,21 @@ function refreshList() {
         completedInput.checked = item.completed;
 
         ITEMS_CONTAINER.append(itemElement);
-    }
+    
     descriptionInput.addEventListener("change", () => {
         updateItem(item, "description", descriptionInput.value);
-
+    });
     completedInput.addEventListener("change", () => {
         updateItem(item, "completed", completedInput.checked);
-        });
     });
+    }
 }
 
 
-
-ADD_BUTTON.adEventListener("click", () => {
+ADD_BUTTON.addEventListener("click", () => {
     addItem();
 })
 
 refreshList();
+
+// video https://www.youtube.com/watch?v=cijPd-TXPn4&t=102s
